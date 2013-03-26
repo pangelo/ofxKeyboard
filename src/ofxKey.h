@@ -62,7 +62,7 @@ public:
 	
 	// Checkers. someday this will become events
     //
-	bool isOver(int _x, int _y){isOver(ofPoint(_x,_y));};
+	bool isOver(int _x, int _y){return isOver(ofPoint(_x,_y));};
 	bool isOver(ofPoint _location);
     
     string letter;
