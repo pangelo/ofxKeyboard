@@ -72,6 +72,10 @@ void ofxKey::draw(){
         fg.lerp(*foregroundColor, 0.1);
         bg.lerp(*backgroundColor, 0.1);
     }
+    else {
+        fg = *foregroundColor;
+        bg = *backgroundColor;    
+    }
     
 	ofPushMatrix();
 		ofTranslate(position.x, position.y);
@@ -79,12 +83,12 @@ void ofxKey::draw(){
 		
 		ofSetColor(bg);
 		ofFill();
-        ofRectRounded(-width*0.5, -height*0.5, width, height, 5);
-    
+        	ofRectRounded(-width*0.5, -height*0.5, width, height, 5);
+
 		ofNoFill();
 		ofSetLineWidth(2);
 		ofSetColor(fg);
-        ofRectRounded(-width*0.5, -height*0.5, width, height, 5);
+        	ofRectRounded(-width*0.5, -height*0.5, width, height, 5);
 	
 		ofFill();
 		ofSetColor(fg);

@@ -72,13 +72,13 @@ public:
 	
 	// Checks things
 	bool isOver(ofPoint _loc);
-	bool isOver(int _x, int _y){return isOver(ofPoint(_x,_y));};
+	bool isOver(int _x, int _y){ return isOver(ofPoint(_x,_y)); };
 	
 	bool isOnBorder(ofPoint _loc);
-	bool isOnBorder(int _x, int _y){return isOnBorder(ofPoint(_x,_y));};
+	bool isOnBorder(int _x, int _y){ return isOnBorder(ofPoint(_x,_y)); };
 	
 	bool checkKeys(ofPoint _loc);
-	bool checkKeys(int _x, int _y){ return checkKeys(ofPoint(_x,_y));};
+	bool checkKeys(int _x, int _y){ return checkKeys(ofPoint(_x,_y)); };
 	
 #ifdef USE_TUIO
 	ofxTuioClient * tuioClient;

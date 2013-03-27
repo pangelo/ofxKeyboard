@@ -45,7 +45,7 @@ public:
 	void setFont(ofTrueTypeFont * _font){font = _font;};
 	void setKeyboardCenter(ofPoint * _keyboardCenter){keyboardCenter = _keyboardCenter;};
 	void setKeyboardNorth(float * _keyboardNorth){keyboardNorth = _keyboardNorth;};
-	void setColors(const ofColor * _foregroundColor, const ofColor * _backgroundColor ){ foregroundColor = _foregroundColor; backgroundColor = _backgroundColor;};
+	void setColors(const ofColor * _foregroundColor, const ofColor * _backgroundColor ){ foregroundColor = _foregroundColor; backgroundColor = _backgroundColor; fg = *foregroundColor; bg = *backgroundColor;};
 	
 	//	This information is important for making new keyboard map.
     //
