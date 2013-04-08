@@ -42,6 +42,9 @@ ofxKeyboard::ofxKeyboard(){
 	
 	width = 0;
 	height = 0;
+
+	rotation_enabled = true;
+	resize_enabled = true;
 }
 
 void ofxKeyboard::loadmap(const string& path){
@@ -82,7 +85,15 @@ void ofxKeyboard::loadmap(const string& path){
 	fs.close();
 }
 
+void ofxKeyboard::rotate(float _angle){ 
+  if (!rotation_enabled) { return; }
+
+  angle += _angle;
+};
+
 void ofxKeyboard::resize(float _resize){
+  if (!resize_enabled) { return; }
+
 	width *= _resize;
 	height *= _resize;
 	

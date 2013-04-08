@@ -61,10 +61,13 @@ public:
     void savemap(const string& filePath);
 	
 	// Acctions
-	void rotate(float _angle){ angle += _angle;};
+	void rotate(float _angle);
 	void resize(float _resize);
 	void draw();
 	
+	void allowRotation (bool _allow) { rotation_enabled = _allow; }
+	void allowResize (bool _allow) { rotation_enabled = _allow; }
+
 	// Edit keyboard actions
 	void addKey(string _letter, int _x, int _y, int _width, int _height);				// Pass the cartesian x and y cordinates of the screen
 	void moveKeyTo(int _indexKey, int _x, int _y ){ keys[_indexKey].moveTo(_x,_y); };	// Pass the cartesian x and y cordinates of the screen
@@ -103,6 +106,9 @@ public:
 	float	width,height;						// Width and Height of the keyboard
 	ofColor	foregroundColor,backgroundColor;	// Hexcode of the fore and background
 	
+	bool rotation_enabled;
+	bool resize_enabled;
+
 	ofTrueTypeFont  font;
 	
 	ofEvent<string> keyPressed;					// Key Event
